@@ -23,6 +23,12 @@ body {
   pointer-events: none;
 }
 
+.logo-nav {
+  height: 5vh;
+  position: absolute;
+  left: 0;
+}
+
 .navbar {
   background-color: #282c34;
   min-height: 10vh;
@@ -60,14 +66,14 @@ li {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(360deg);
   }
   to {
     transform: rotate(0deg);
   }
-}
+} */
 
 /* Fade - enter 300ms exit 150ms */
 
