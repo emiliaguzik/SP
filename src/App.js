@@ -1,25 +1,45 @@
 import React from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import "./App.css";
+import Home from "./Home";
+import About from "./About";
+import Projects from "./Projects";
+import Blog from "./Blog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          A future webpage using <code>React.js</code> as the driving force
-        </p>
-        <a
-          className="App-link"
-          href="https://github.com/emiliaguzik/SP"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav className="navbar">
+        <ul>
+          <li>
+            <Link to="/" className="react-link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="react-link">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/projects" className="react-link">
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog" className="react-link">
+              Blog
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/blog" component={Blog} />
+      </Switch>
+    </Router>
   );
 }
 
