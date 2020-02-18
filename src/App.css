@@ -1,3 +1,7 @@
+body {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -8,6 +12,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
 }
 
 .App-logo {
@@ -59,4 +67,27 @@ li {
   to {
     transform: rotate(0deg);
   }
+}
+
+/* Fade - enter 300ms exit 150ms */
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms ease-out;
 }
