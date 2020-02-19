@@ -1,5 +1,6 @@
 body {
   background-color: #282c34;
+  font-weight: 200;
 }
 
 .App {
@@ -21,6 +22,10 @@ body {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+h1 {
+  font-weight: 100;
 }
 
 .logo-nav {
@@ -49,7 +54,7 @@ li {
 
 .react-link {
   text-decoration: none;
-  color: #ffea31;
+  color: #d3a641;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -59,11 +64,11 @@ li {
 }
 
 .hl {
-  color: #ffea31;
+  color: #d3a641;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #006a4e;
 }
 
 /* @keyframes App-logo-spin {
