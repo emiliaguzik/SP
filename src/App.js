@@ -42,6 +42,7 @@ function App() {
           </li>
         </ul>
       </nav>
+      <Home />
       <Route
         render={({ location }) => (
           <TransitionGroup>
