@@ -1,11 +1,18 @@
+:root {
+  --mainColor: #d3a641;
+  --secondaryColor: #006a4e;
+  --backgroundColor: #282c34;
+}
+
 body {
-  background-color: #282c34;
-  font-weight: 200;
+  background-color: var(--backgroundColor);
+  font-weight: 300;
+  margin: 0.5rem;
 }
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: var(--backgroundColor);
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -35,10 +42,34 @@ h1 {
 }
 
 .navbar {
-  background-color: #282c34;
+  background-color: var(--backgroundColor);
   min-height: 10vh;
   display: flex;
   justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s;
+}
+
+.App a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.App a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 ul {
@@ -49,26 +80,41 @@ ul {
 li {
   list-style-type: none;
   display: inline-block;
-  padding: 10px;
+  margin: 0.4rem;
+  font-weight: 400;
+  transition: all 0.2s;
+}
+
+li:hover {
+  transform: translateY(-5px);
 }
 
 .react-link {
-  text-decoration: none;
-  color: #d3a641;
+  color: var(--mainColor);
+  border-radius: 5px;
+  margin-left: 0.2rem;
+  padding: 0.4rem;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.react-link:hover {
+  box-shadow: 0 5px 5px 0px var(--secondaryColor);
+  border-radius: 5px;
+  border: var(--secondaryColor) solid 1px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .hl {
-  color: #d3a641;
+  color: var(--mainColor);
 }
 
 .App-link {
-  color: #006a4e;
+  color: var(--secondaryColor);
 }
 
 /* @keyframes App-logo-spin {
