@@ -16,27 +16,27 @@ function App() {
         <img src={logo} className="logo-nav" alt="logo" />
         <ul>
           <li>
-            <Link to="/" className="react-link">
+            <Link to="/SP" className="react-link">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="react-link">
+            <Link to="/SP/about" className="react-link">
               About
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="react-link">
+            <Link to="/SP/projects" className="react-link">
               Projects
             </Link>
           </li>
           <li>
-            <Link to="/blog" className="react-link">
+            <Link to="/SP/blog" className="react-link">
               Blog
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="react-link">
+            <Link to="/SP/contact" className="react-link">
               Contact
             </Link>
           </li>
@@ -47,11 +47,11 @@ function App() {
           <TransitionGroup>
             <CSSTransition key={location.key} timeout={450} classNames="fade">
               <Switch location={location}>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/projects" component={Projects} />
-                <Route exact path="/blog" component={Blog} />
-                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/SP" component={Home} />
+                <Route exact path="/SP/about" component={About} />
+                <Route exact path="/SP/projects" component={Projects} />
+                <Route exact path="/SP/blog" component={Blog} />
+                <Route exact path="/SP/contact" component={Contact} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>
