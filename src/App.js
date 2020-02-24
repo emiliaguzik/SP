@@ -16,7 +16,7 @@ function App() {
         <img src={logo} className="logo-nav" alt="logo" />
         <ul>
           <li>
-            <Link to="/SP" className="react-link">
+            <Link to="/SP/" className="react-link">
               Home
             </Link>
           </li>
